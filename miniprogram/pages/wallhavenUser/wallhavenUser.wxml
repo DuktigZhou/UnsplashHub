@@ -1,0 +1,43 @@
+<view class="info_warp">
+  <view class="info">
+    <image class="curr_user_image" src="{{currUserAvatar}}" mode="widthFix" />
+  </view>
+  <view class="desc_warp">
+  <view class="desc_username">{{currUserName}}</view>
+</view>
+</view>
+
+<view class="button-example">
+  <!-- <view class="download">
+    <t-button class="download_btn" icon="download-1" size="large" block bind:tap="downloadWall">下载原图</t-button>
+  </view> -->
+  <view class="download">
+    <t-button class="download_btn" icon="link" size="large" block bind:tap="downloadWall">Wallhaven主页链接</t-button>
+  </view>
+</view>
+
+<!-- <view class="desc_warp">
+  <view class="desc_username">{{currUserName}}</view>
+</view> -->
+
+
+<view class="wallhaven_list">
+  <view class="wallhaven_list_left">
+    <view wx:for="{{ userPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="wallhaven_item" wx:if="{{ index % 2 === 0 }}" bind:tap="toWallhavenPicDetail" data-wid="{{item.id}}">
+        <view class="wallhaven_img">
+          <image src="{{ item.thumbs.original }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="wallhaven_list_right">
+    <view wx:for="{{ userPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="wallhaven_item" wx:if="{{ index % 2 === 1 }}" bind:tap="toWallhavenPicDetail" data-wid="{{item.id}}">
+        <view class="wallhaven_img">
+          <image src="{{ item.thumbs.original }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

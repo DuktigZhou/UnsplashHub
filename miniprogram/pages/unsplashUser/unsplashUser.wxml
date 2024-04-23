@@ -1,0 +1,48 @@
+<view class="info_warp">
+  <view class="info">
+    <image class="curr_user_image" src="{{userProfile.profile_image.medium}}" mode="widthFix" />
+  </view>
+
+  <view class="info">
+    <text class="info_label">图片</text>
+    <text class="info_data">{{userProfile.total_photos}}</text>
+  </view>
+
+  <view class="info">
+    <text class="info_label">影集</text>
+    <text class="info_data">{{userProfile.total_collections}}</text>
+  </view>
+
+  <view class="info">
+    <text class="info_label">喜爱</text>
+    <text class="info_data">{{userProfile.total_likes}}</text>
+  </view>
+</view>
+
+<view class="desc_warp">
+  <view class="desc_username">{{userProfile.name}}</view>
+  <view class="desc_userlocation" wx:if="{{userProfile.location !== null}}">{{userProfile.location}}</view>
+  <view class="desc_userdesc" wx:if="{{userProfile.bio !== null}}">{{userProfile.bio}}</view>
+</view>
+
+
+<view class="unsplash_list">
+  <view class="unsplash_list_left">
+    <view wx:for="{{ userPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 0 }}" bind:tap="toUnsplashPicDetail" data-pid="{{item.id}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="unsplash_list_right">
+    <view wx:for="{{ userPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 1 }}" bind:tap="toUnsplashPicDetail" data-pid="{{item.id}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

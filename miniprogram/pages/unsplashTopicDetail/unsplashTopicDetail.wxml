@@ -1,0 +1,31 @@
+<view class="curr_topic_warp">
+  <view class="curr_topic_warp1">
+    <view class="curr_topic_warp2">
+      <image src="../../static/Unsplash_Symbol.png" />
+      <view class="curr_topic_title">{{currTopicTitle}}</view>
+    </view>
+    <view class="curr_topic_count">{{currTopicDesc}}</view>
+  </view>
+</view>
+
+
+<view class="unsplash_list">
+  <view class="unsplash_list_left">
+    <view wx:for="{{ topicPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 0 }}" bind:tap="toUnsplashPicDetail" data-pid="{{item.id}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="unsplash_list_right">
+    <view wx:for="{{ topicPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 1 }}" bind:tap="toUnsplashPicDetail" data-pid="{{item.id}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+.curr_collection_warp1 {
+  margin: 40rpx;
+}
+
+.curr_collection_title {
+  font-size: 64rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.curr_collection_warp1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.curr_collection_username,
+.curr_collection_count {
+  font-size: 30rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+
+.unsplash_warp {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0rpx 30rpx 0rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.unsplash_logo_warp image {
+  width: 190.6px;
+  height: 43.5px;
+  margin: 24rpx;
+}
+
+.unsplash_plus {
+  margin-top: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.unsplash_plus text {
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-weight: bold;
+}
+
+.unsplash_list {
+  display: flex;
+  padding: 10rpx;
+  justify-content: space-around;
+}
+
+.unsplash_item {
+  width: 340rpx;
+  margin-top: 20rpx;
+  border-radius: 24rpx;
+  background-color: #fff;
+}
+
+.unsplash_img image {
+  width: 100%;
+  border-radius: 24rpx 24rpx 24rpx 24rpx;
+}

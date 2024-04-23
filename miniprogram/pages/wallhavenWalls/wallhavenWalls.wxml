@@ -1,0 +1,70 @@
+<view class="curr_pic">
+  <image class="curr_img" src="{{currWallDetail.thumbs.original}}" mode="widthFix" bind:tap="previewPic" />
+</view>
+
+<view class="curr_user_warp" bind:tap="toWallhavenUser">
+  <view class="curr_user">
+    <image class="curr_user_image" src="{{currWallDetail.uploader.avatar['128px']}}" mode="aspectFill" />
+    <text class="curr_user_name">{{currWallDetail.uploader.username}}</text>
+  </view>
+  <view class="curr_user_arrow">
+    <image class="curr_user_arrow_image" src="/static/icon/icons8-forward-96.png" mode="widthFix" />
+  </view>
+</view>
+
+<view class="button-example">
+  <view class="download">
+    <t-button class="download_btn" icon="download-1" size="large" block bind:tap="downloadWall">下载原图</t-button>
+  </view>
+  <view class="download">
+    <t-button class="download_btn" icon="link" size="large" block bind:tap="downloadWall">复制链接</t-button>
+  </view>
+</view>
+
+<view class="divider">
+  <t-divider style="--td-divider-color:rgb(150, 150, 150)" />
+</view>
+
+<view class="exif_warp">
+  <view class="exif">
+    <text class="exif_label">添加时间</text>
+    <text class="exif_data">{{currWallDate}}</text>
+  </view>
+  <view class="exif">
+    <text class="exif_label">浏览</text>
+    <text class="exif_data">{{currWallViews}}</text>
+  </view>
+</view>
+
+<view class="exif_warp">
+  <view class="exif">
+    <text class="exif_label">原图尺寸</text>
+    <text class="exif_data">{{currWallDetail.dimension_x}} × {{currWallDetail.dimension_y}} </text>
+  </view>
+  <view class="exif">
+    <text class="exif_label">原图大小</text>
+    <text class="exif_data">{{currWallDetail.file_size / 1000}} KB</text>
+  </view>
+</view>
+
+<view class="exif_warp">
+  <view class="exif">
+    <text class="exif_label">Wallhaven 分类</text>
+    <text class="exif_data">{{currWallDetail.category}} & {{currWallDetail.purity}}</text>
+  </view>
+  <view class="exif">
+    <text class="exif_label">格式</text>
+    <text class="exif_data">{{currWallDetail.file_type}}</text>
+  </view>
+</view>
+
+
+<view class="divider">
+  <t-divider style="--td-divider-color:rgb(150, 150, 150)" />
+</view>
+
+<view class="demo">
+  <view wx:for="{{currWallDetail.tags}}" wx:for-item="tag">
+    <t-tag class="tags" size="large" variant="light-outline">{{tag.name}}</t-tag>
+  </view>
+</view>

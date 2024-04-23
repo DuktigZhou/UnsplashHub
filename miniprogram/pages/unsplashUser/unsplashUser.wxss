@@ -1,0 +1,85 @@
+.info_warp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30rpx 10rpx 10rpx 10rpx;
+}
+.curr_user_image {
+  border-radius: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 20rpx;
+}
+.info {
+  flex-basis: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_data {
+  text-align: left;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.info_label {
+  text-align: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+  line-height: 50rpx;
+}
+
+.desc_warp{
+  display: flex;
+  flex-direction: column;
+  margin: 0rpx 40rpx 0rpx 40rpx;
+}
+
+.desc_username{
+  text-align: left;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.desc_userlocation{
+  text-align: left;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.desc_userdesc{
+  text-align: left;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+
+
+.unsplash_list {
+  display: flex;
+  padding: 10rpx;
+  justify-content: space-around;
+}
+
+.unsplash_item {
+  width: 340rpx;
+  margin-top: 20rpx;
+  border-radius: 24rpx;
+  background-color: #fff;
+}
+
+.unsplash_img image {
+  width: 100%;
+  border-radius: 24rpx 24rpx 24rpx 24rpx;
+}

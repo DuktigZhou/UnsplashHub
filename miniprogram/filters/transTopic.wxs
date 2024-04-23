@@ -1,0 +1,38 @@
+var getChsTopic = {
+  chsifyTopic: function (slug) {
+    var topicChs =  [
+      { "on-the-lake": "特辑：湖边风光"},
+      { wallpapers: "壁纸"},
+      { "3d-renders": "3D 渲染"},
+      { nature: "自然"},
+      { "textures-patterns": "纹理和图案"},
+      { "architecture-interior": "建筑与室内设计"},
+      { film: "胶片"},
+      { "street-photography": "街头摄影"},
+      { experimental: "实验性摄影"},
+      { animals: "动物"},
+      { "fashion-beauty": "时尚与美容"},
+      { "business-work": "商业与工作"},
+      { "food-drink": "美食与饮品"},
+      { travel: "旅行" },
+      { people: "人物"},
+      { spirituality: "灵性"},
+      { athletics: "运动"},
+      { health: "健康"},
+      { "current-events": "时事"},
+      { "arts-culture": "艺术与文化"},
+    ]
+
+    for (var i = 0; i < topicChs.length; i++) {
+      var translation = topicChs[i];
+      if (translation[slug] !== undefined) {
+        return translation[slug];
+      }
+    }
+    return "";
+  }
+};
+
+module.exports = {
+  chs: getChsTopic.chsifyTopic,
+};

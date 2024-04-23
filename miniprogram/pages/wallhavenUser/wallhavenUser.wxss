@@ -1,0 +1,97 @@
+.info_warp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 30rpx 10rpx 10rpx 30rpx;
+}
+.curr_user_image {
+  border-radius: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0rpx 0rpx 20rpx 0rpx;
+}
+.info {
+  /* flex-basis: 50%; */
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  /* justify-content: center; */
+}
+
+.info_data {
+  text-align: left;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.info_label {
+  text-align: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+  line-height: 50rpx;
+}
+
+.desc_warp{
+  display: flex;
+  flex-direction: column;
+  margin: 0rpx 40rpx 0rpx 40rpx;
+}
+
+.desc_username{
+  text-align: left;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.button-example {
+  margin: 0rpx 26rpx 20rpx 26rpx;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  gap: 28rpx;
+}
+
+.download {
+  width: 100%; 
+  margin: auto;
+  padding: 30rpx 0rpx 20rpx 0rpx;
+}
+.download_btn {
+  --td-button-border-radius: 24rpx;
+}
+
+.download_btn_text_hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.download_btn_text_hint text {
+  font-size: 22rpx;
+}
+
+
+
+.wallhaven_list {
+  display: flex;
+  padding: 10rpx;
+  justify-content: space-around;
+}
+
+.wallhaven_item {
+  width: 340rpx;
+  margin-top: 20rpx;
+  border-radius: 24rpx;
+  /* background-color: #fff; */
+}
+
+.wallhaven_img image {
+  width: 100%;
+  border-radius: 24rpx 24rpx 24rpx 24rpx;
+}

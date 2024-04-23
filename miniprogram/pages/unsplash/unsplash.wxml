@@ -1,0 +1,62 @@
+<view class="unsplash_warp">
+  <view class="unsplash_logo_warp">
+    <image src="../../static/Unsplash_Logo_Full.png" />
+    <!-- <view class="PiconLogo">Picon</view> -->
+  </view>
+  <view class="unsplash_logo_warp">
+    <text>视觉之源，由全球最慷慨的摄影师社区驱动</text>
+  </view>
+</view>
+
+<view class="card_warp">
+  <view class="card_topic_warp" bind:tap="toTopic">
+    <view class="card_topic_title">
+      <text class="card_topic_title_text">主题</text>
+      <image class="card_topic_title_icon" src="/static/icon/icons8-forward-96.png"></image>
+    </view>
+    <view class="card_topic_body">
+      <text class="card_topic_body_text">通过各种主题发现Unsplash</text>
+      <image class="card_topic_body_icon" src="/static/icon/icons8-新产品-96.png"></image>
+    </view>
+  </view>
+
+  <navigator class="card_collection_warp" url="../../pages/unsplashCollections/unsplashCollections">
+    <view class="card_collection_title">
+      <text class="card_collection_title_text">影集</text>
+      <image class="card_collection_title_icon" src="/static/icon/icons8-forward-96.png"></image>
+    </view>
+    <view class="card_collection_body">
+      <text class="card_collection_body_text">探索各地用户创建的影集</text>
+      <image class="card_collection_body_icon" src="/static/icon/icons8-love-96.png"></image>
+    </view>
+  </navigator>
+</view>
+
+<view class="unsplash_list_text">
+  <!-- <text class="unsplash_list_text_text">编辑精选</text> -->
+  <view class="unsplash_list_layout_1">
+    <image class="unsplash_list_layout_1_icon" src="/static/icon/icons8-love-96.png"></image>
+    <text class="unsplash_list_layout_1_text">编辑精选</text>
+  </view>
+</view>
+
+<view class="unsplash_list">
+  <view class="unsplash_list_left">
+    <view wx:for="{{ unsplashRawData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 0 }}" bind:tap="toUnsplashPicDetail" data-pidx="{{index}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="unsplash_list_right">
+    <view wx:for="{{ unsplashRawData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 1 }}" bind:tap="toUnsplashPicDetail" data-pidx="{{index}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+.collectionlist{
+  margin-top: 20rpx;
+}
+.card{
+  float: left;
+  margin-left: 25rpx;
+  margin-top: 25rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card image {
+  border-radius: 24rpx;
+}
+
+.collection-image{
+  width: 340rpx;
+  height: 400rpx;
+  filter: brightness(70%);
+}
+.collection-name{
+  display: block;
+  position: absolute;
+  color: #fff;
+  bottom: 15%;
+  left: 5%;
+  text-align: left;
+  font-size: 32rpx;
+  padding: 10rpx;
+  font-weight: bold;
+}
+
+.collection-count{
+  display: block;
+  position: absolute;
+  color: #fff;
+  bottom: 5%;
+  left: 5%;
+  text-align: left;
+  font-size: 26rpx;
+  padding: 10rpx;
+}

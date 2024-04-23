@@ -1,0 +1,90 @@
+<view class="curr_pic">
+  <image class="curr_img" src="{{currPicDetail.urls.regular}}" mode="widthFix" bind:tap="previewPic" />
+</view>
+
+<view class="curr_user_warp" bind:tap="toUnsplashUser">
+  <view class="curr_user">
+    <image class="curr_user_image" src="{{currPicDetail.user.profile_image.medium}}" mode="widthFix" />
+    <text class="curr_user_name">{{currPicDetail.user.name}}</text>
+  </view>
+  <view class="curr_user_arrow">
+    <image class="curr_user_arrow_image" src="/static/icon/icons8-forward-96.png" mode="widthFix" />
+  </view>
+</view>
+
+
+<view class="desc_warp" wx:if="{{currPicDetail.location.name}}">
+  <text class="desc_text_location">{{currPicDetail.location.name}}</text>
+</view>
+<view class="desc_warp" wx:if="{{currPicDetail.description}}">
+  <text class="desc_text">{{currPicDetail.description}}</text>
+</view>
+
+
+
+<view class="divider">
+  <t-divider style="--td-divider-color:rgb(150, 150, 150)" />
+</view>
+
+
+<view class="info_warp">
+  <view class="info">
+    <text class="exif_label">发布时间</text>
+    <text class="exif_data">{{currPicDate == '01/01 00:00' ? '未知' : currPicDate}}</text>
+  </view>
+
+  <view class="info">
+    <text class="exif_label">浏览</text>
+    <text class="exif_data">{{currPicViews}}</text>
+  </view>
+
+  <view class="info">
+    <text class="exif_label">下载</text>
+    <text class="exif_data">{{currPicDetail.downloads}}</text>
+  </view>
+  <view class="download">
+    <t-button class="download_btn" size="large" block bind:tap="downloadPic">下载原图</t-button>
+    <!-- <view class="download_btn_text_hint">
+      <text>Unsplash 访问较慢，下载和预览原图可能需要一些时间</text>
+    </view> -->
+  </view>
+</view>
+
+<view class="divider">
+  <t-divider style="--td-divider-color:rgb(150, 150, 150)" />
+</view>
+
+<view class="exif_warp">
+  <view class="exif">
+    <text class="exif_label">相机</text>
+    <text class="exif_data">{{currPicDetail.exif.model==null ? '未知' : currPicDetail.exif.model}}</text>
+  </view>
+
+  <view class="exif">
+    <text class="exif_label">光圈</text>
+    <text class="exif_data">{{currPicDetail.exif.aperture == null ? '未知' : 'f/' + currPicDetail.exif.aperture}}</text>
+  </view>
+</view>
+
+<view class="exif_warp">
+  <view class="exif">
+    <text class="exif_label">焦距</text>
+    <text class="exif_data">{{currPicDetail.exif.focal_length == '0.0' || currPicDetail.exif.focal_length == null ? '未知' : currPicDetail.exif.focal_length + 'mm'}}</text>
+  </view>
+
+  <view class="exif">
+    <text class="exif_label">曝光时间</text>
+    <text class="exif_data">{{currPicDetail.exif.exposure_time == null ? '未知' : currPicDetail.exif.exposure_time + 's'}}</text>
+  </view>
+</view>
+<view class="exif_warp">
+  <view class="exif">
+    <text class="exif_label">ISO</text>
+    <text class="exif_data">{{currPicDetail.exif.iso == null ? '未知' : currPicDetail.exif.iso}}</text>
+  </view>
+
+  <view class="exif">
+    <text class="exif_label">原图尺寸</text>
+    <text class="exif_data">{{currPicDetail.height}} × {{currPicDetail.width}} </text>
+  </view>
+</view>

@@ -1,0 +1,133 @@
+.curr_pic {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 5rpx 20rpx 5rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.curr_img {
+  border-radius: 24rpx;
+}
+
+.curr_user_warp {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 50rpx 20rpx 60rpx;
+  justify-content: space-between;
+}
+.curr_user{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.curr_user_arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+.curr_user_arrow_image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.curr_user_image {
+  border-radius: 50%;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.curr_user_name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 24rpx;
+}
+
+.desc_warp {
+  display: flex;
+  flex-direction: column;
+  margin: 0rpx 60rpx 30rpx 60rpx;
+}
+
+.desc_text {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+
+.desc_text_location {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  font-weight: bold;
+}
+
+.download {
+  width: 86%;
+  margin: auto;
+  padding: 30rpx 0rpx 0rpx 0rpx;
+}
+.download_btn {
+  --td-button-border-radius: 24rpx;
+}
+
+.download_btn_text_hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.download_btn_text_hint text {
+  font-size: 22rpx;
+}
+
+.divider {
+  width: 86%;
+  margin: auto;
+  padding: 0rpx 30rpx 30rpx 30rpx;
+}
+
+.info_warp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0rpx 10rpx 30rpx 10rpx;
+}
+.info {
+  flex-basis: 33.3%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.exif_warp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0rpx 60rpx 30rpx 60rpx;
+}
+
+.exif {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.exif_data {
+  text-align: left;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  line-height: 50rpx;
+}
+
+.exif_label {
+  text-align: left;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+  margin-left: 20rpx;
+  line-height: 50rpx;
+}

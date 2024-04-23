@@ -1,0 +1,28 @@
+<wxs module="chsifyTopic" src="../../filters/transTopic.wxs"></wxs>
+
+<view class="curr_topic_warp">
+  <view class="curr_topic_warp1">
+    <view class="curr_topic_warp2">
+      <view class="curr_topic_title">主题</view>
+    </view>
+    <view class="curr_topic_count">通过各种主题发现 Unsplash</view>
+  </view>
+</view>
+
+<view class="collectionlist">
+  <block wx:for="{{topicRawData}}" wx:key="id">
+    <view class="collection-list">
+      <view bind:tap="toUnsplashTopicDetail" data-tid="{{item.id}}" data-tslug="{{item.slug}}" data-tdescription="{{item.description}}">
+        <view class="card">
+          <image class="collection-image" src="{{item.cover_photo.urls.small}}" mode="aspectFill" />
+          <view class="collection-name_warp">
+            <text class="collection-slug">{{chsifyTopic.chs(item.slug)}}</text>
+            <text class="collection-name">{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view style="margin-bottom: 40rpx;"></view>

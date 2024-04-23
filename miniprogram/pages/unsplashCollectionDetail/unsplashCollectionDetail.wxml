@@ -1,0 +1,38 @@
+<view class="curr_collection_warp">
+  <view class="curr_collection_warp1">
+    <view class="curr_collection_title">{{currCollectionTitle}}</view>
+    <view class="curr_collection_username">由{{currCollectionUserName}}创建</view>
+    <view class="curr_collection_count">{{currCollectionPicCount}}张照片</view>
+  </view>
+</view>
+
+<view class="unsplash_plus" wx:if="{{currCollectionUserName == 'Unsplash+ Collections'}}">
+  <!-- <view class="unsplash_logo_warp">
+    <image src="http://rzquu5zim.hd-bkt.clouddn.com/Unsplash_Logo_Full.png" />
+  </view> -->
+  <text>该影集为 Unsplash+ 订阅会员专属</text>
+  <text>暂不支持在小程序端查看</text>
+  <text>详见 unsplash.com/plus</text>
+</view>
+
+
+<view class="unsplash_list" wx:else>
+  <view class="unsplash_list_left">
+    <view wx:for="{{ collectionPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 0 }}" bind:tap="toUnsplashPicDetail" data-pid="{{item.id}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="unsplash_list_right">
+    <view wx:for="{{ collectionPicData }}" wx:for-index="index" wx:for-item="item">
+      <view class="unsplash_item" wx:if="{{ index % 2 === 1 }}" bind:tap="toUnsplashPicDetail" data-pid="{{item.id}}">
+        <view class="unsplash_img">
+          <image src="{{ item.urls.small }}" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
